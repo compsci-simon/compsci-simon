@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @compsci-simon
 - 👀 I’m interested in different coding projects from webdev to java and C
 - 🌱 I’m currently learning Concurrency and web dev at the university of stellenbosch
-- 💞️ I’m looking to collaborate on ...
+- 💞️ I’m looking to collaborate on any cool developement projects.
 - 📫 How to reach me 1simonsteven@gmail.com
 
 <!---
