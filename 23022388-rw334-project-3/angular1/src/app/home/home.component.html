@@ -1,0 +1,95 @@
+<label> Filter feed by </label>
+<select [(ngModel)]="selectedFilter"> 
+  <option *ngFor="let filter of filters">{{filter.option}}</option>
+</select>
+<input class= 'btn btn-outline-info' type = "submit" value = "Change" (click)="onChangeFilter()">
+
+<mat-form-field *ngIf=search_boolean[0]>
+  <mat-label>Select time</mat-label>
+  <mat-select [(ngModel)]="selectedTime" name = "value">
+    <mat-option *ngFor="let item of times" value="{{ item.value }}" (click)="filter()">{{ item.text }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field *ngIf=search_boolean[1]>
+  <mat-label>Select location</mat-label>
+  <mat-select [(ngModel)]="selectedLocation" name = "value">
+    <mat-option *ngFor="let item of locations" value="{{ item.value }}" (click)="filter()">{{ item.text }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field *ngIf=search_boolean[2]>
+  <mat-label>Select category</mat-label>
+  <mat-select [(ngModel)]="selectedCategory" name = "value">
+    <mat-option *ngFor="let cat of categories" value="{{ cat }}" (click)="filter()">{{ cat }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field *ngIf=search_boolean[3]>
+  <mat-label>Select Group</mat-label>
+  <mat-select [(ngModel)]="selectedGroup" name = "value">
+    <mat-option *ngFor="let group of groups" value="{{ group }}" (click)="filter()">{{ group }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field *ngIf=search_boolean[4]>
+  <mat-label>Select user</mat-label>
+  <mat-select [(ngModel)]="selectedUser" name = "value">
+    <mat-option *ngFor="let user of users" value="{{ user }}" (click)="filter()">{{ user }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div>
+  <div *ngFor="let post of posts">
+    <mat-card class="mt-3 p-4">
+
+        <p style="font-size:12px;" class="text-muted text-size-sm">
+          <em>{{ post.time }}</em><cite> ~ {{ post.user }}</cite></p>
+      <!-- HEADER -->
+      <mat-card-header>
+        <div mat-card-avatar><ngx-avatar gravatarId="{{ post.email }}" name="{{ post.user }}"></ngx-avatar></div>
+        <mat-card-title>
+          {{ post.title }}
+        </mat-card-title>
+
+        <mat-card-subtitle>
+          <mat-chip-list>
+            <mat-chip color="accent" >{{ post.group }}</mat-chip>
+          </mat-chip-list>
+          <mat-chip-list>
+            <mat-chip *ngFor="let category of post.category" color="primary" disabled>{{ category.name }}</mat-chip>
+          </mat-chip-list>
+        </mat-card-subtitle>
+
+      </mat-card-header>
+
+      <!-- CONTENT -->
+      <mat-card-content>
+        <div class="row mb-3">
+          <label><h6>Post:</h6></label>
+          <div>{{ post.content }}</div>
+          <label><h6>Location:</h6></label>
+          <div class="ml-4">{{ post.location }}</div>
+
+          <h6>Comments:</h6>
+          <div *ngFor="let comment of post.comments">{{ comment.comment_content }}</div>
+        </div>
+      </mat-card-content>
+
+      <!-- ACTIONS -->
+      <mat-card-actions>
+        <form #myform="ngForm" name="thisform" (ngSubmit)="comment(post, myform.value, myform)">
+          <mat-form-field>
+            <mat-label>Leave a comment</mat-label>
+            <input name="commentInput" type="text" matInput ngModel>
+          </mat-form-field>
+          <button mat-stroked-button type="submit">
+            <mat-icon color="primary">insert_comment</mat-icon>
+          </button>
+        </form>
+      </mat-card-actions>
+
+    </mat-card>
+  </div>
+  <hr>
+</div>

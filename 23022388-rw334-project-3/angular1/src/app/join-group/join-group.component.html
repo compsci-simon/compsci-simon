@@ -1,0 +1,16 @@
+<mat-list>
+  <form >
+    <mat-form-field>
+      <mat-label>Search for a group</mat-label>
+      <input name="search" (keyup)="refineList()" [(ngModel)]="search" type="text" matInput>
+    </mat-form-field>
+  </form>
+  
+  <div *ngFor="let group of groups">
+    <div class="d-flex justify-content-between">
+      <mat-list-item>{{ group.group_name }}</mat-list-item>
+      <button mat-button (click)="join_group(group.id)"><mat-icon color="primary">group_add</mat-icon></button>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</mat-list>

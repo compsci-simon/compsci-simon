@@ -1,0 +1,12 @@
+<form action="" class="d-flex" [formGroup]="myForm" (ngSubmit)="submitHandler()">
+  <mat-form-field>
+    <mat-label>Group name</mat-label>
+    <input type="text" matInput formControlName="group_name">
+    <mat-error>
+      Field required
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-stroked-button color="primary" value="submit" [disabled]="myForm.invalid">Create</button>
+
+</form>

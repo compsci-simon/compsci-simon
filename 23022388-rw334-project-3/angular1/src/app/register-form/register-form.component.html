@@ -1,0 +1,56 @@
+<div *ngIf="!submit; else notSubmitted">
+  <form class="border p-5" [formGroup]="myForm" (ngSubmit)="submitHandler()">
+    
+    <legend>Register form</legend>
+
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input type="username" matInput formControlName="username" (keyup)="usernameExists()">
+      <mat-error *ngIf="myForm.controls['username'].errors?.required">
+        Field required
+      </mat-error>
+      <mat-error *ngIf="myForm.controls['username'].errors?.notUnique">
+        Username taken
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>E-mail</mat-label>
+      <input matInput type="email" formControlName="email">
+      <mat-error *ngIf="email?.errors?.required && email?.touched">
+        Field required
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.email && email?.touched">
+        That is not a valid email address
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password"
+      (keyup)="confirmPasswordValidator()">
+      <mat-error *ngIf="myForm.controls['password'].errors?.required">
+        Field required
+      </mat-error>
+      <mat-error *ngIf="myForm.controls['password'].errors?.pattern">
+        Password required 1 uppercase, lowercase
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" formControlName="confirm_password" 
+        (keyup)="confirmPasswordValidator()">
+      <mat-error *ngIf="confirm_password.errors?.notEqual">
+        Passwords don't match
+      </mat-error>
+    </mat-form-field>
+    
+    <button mat-stroked-button [disabled]="myForm.invalid" >Submit</button>
+  
+  </form>
+</div>
+
+<ng-template #notSubmitted>
+  
+</ng-template>

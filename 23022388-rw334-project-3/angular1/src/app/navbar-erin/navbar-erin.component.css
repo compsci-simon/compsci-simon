@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+}

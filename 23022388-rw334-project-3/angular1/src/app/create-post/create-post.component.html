@@ -1,0 +1,73 @@
+<form class="border p-5" [formGroup]="rForm" (ngSubmit)="submitHandler()">
+
+  <mat-form-field>
+    <mat-label>
+      Title
+    </mat-label>
+    <input name="title" type="text" matInput formControlName="title">
+    <mat-error>
+      Field required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>
+      Content
+    </mat-label>
+    <input name="content" type="text" matInput formControlName="content">
+    <mat-error>
+      Field required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>
+      Select group
+    </mat-label>
+    <mat-select name="selectedGroup" formControlName="group_name">
+      <mat-option *ngFor="let group of groups" value="{{ group }}">{{ group }}</mat-option>
+    </mat-select>
+    <mat-error>
+      Field required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>
+      Select a category
+    </mat-label>
+    <mat-select name="category" formControlName="category1_name">
+      <mat-option *ngFor="let cat of categories" value="{{ cat }}">{{ cat }}</mat-option>
+    </mat-select>
+    <mat-error>
+      Field required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>
+      Select a category
+    </mat-label>
+    <mat-select name="category" formControlName="category2_name">
+      <mat-option *ngFor="let cat of categories" value="{{ cat }}">{{ cat }}</mat-option>
+    </mat-select>
+    <mat-error>
+      Field required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>
+      Select a category
+    </mat-label>
+    <mat-select name="category" formControlName="category3_name">
+      <mat-option *ngFor="let cat of categories" value="{{ cat }}">{{ cat }}</mat-option>
+    </mat-select>
+    <mat-error>
+      Field required
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-stroked-button color="primary" [disabled]="rForm.invalid"><mat-icon>post_add</mat-icon></button>
+
+</form>

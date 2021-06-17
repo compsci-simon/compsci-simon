@@ -1,0 +1,9 @@
+
+<mat-selection-list #groupa [multiple]="false">
+  <div *ngFor="let group of groups">
+  <mat-list-option>
+    <mat-list-item ><mat-icon  color="primary" class="d-inline-block">group</mat-icon><span class="d-inline-block">{{ group }}</span></mat-list-item>
+    <mat-divider ></mat-divider>
+  </mat-list-option>
+  </div>
+</mat-selection-list>

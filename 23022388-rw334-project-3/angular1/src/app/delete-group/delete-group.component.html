@@ -1,0 +1,15 @@
+<form [formGroup]="rForm" (ngSubmit)="submitHandler()">
+
+  <mat-form-field>
+    <mat-label>Select group</mat-label>
+    <mat-select formControlName="group_name">
+      <mat-option *ngFor="let group of groups" value="{{ group }}">{{ group }}</mat-option>
+    </mat-select>
+    <mat-error>
+      Select a group
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-stroked-button color="warn" class="mt-3" [disabled]="rForm.invalid" >Delete</button>
+
+</form>

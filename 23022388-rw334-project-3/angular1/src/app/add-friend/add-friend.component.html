@@ -1,0 +1,18 @@
+<mat-list>
+  <form>
+    <mat-form-field>
+      <mat-label>Search for a friend</mat-label>
+      <input name="search" (keyup)="refineList()" [(ngModel)]="search" type="text" matInput>
+    </mat-form-field>
+  </form>
+
+  <div *ngFor="let user of users">
+    <div class="d-flex justify-content-between">
+      <mat-list-item>{{ user }}</mat-list-item>
+      <button mat-button (click)="add_friend(user)">
+        <mat-icon color="primary">person_add_alt</mat-icon>
+      </button>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</mat-list>

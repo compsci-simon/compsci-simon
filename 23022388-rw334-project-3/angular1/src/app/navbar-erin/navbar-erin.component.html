@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container" *ngIf="!loggedIn">
+    <div class="nav-section">
+      <a class="navbar-brand" href="#">TechTok</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="loggedIn">
+    <div class="nav-section">
+      <a class="navbar-brand" routerLink="home">TechTok</a>
+      <ngx-avatar gravatarId={{email}} name={{username}}></ngx-avatar>
+    </div>
+
+    <div class="nav-section">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="friends">Friends</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="groups/manage">Manage Groups</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="post/create">Create Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="profile">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

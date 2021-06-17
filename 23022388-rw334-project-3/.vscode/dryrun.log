@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/simon/Developer/git_repos/23022388-rw334-project-3'
+make: Leaving directory `/Users/simon/Developer/git_repos/23022388-rw334-project-3'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 

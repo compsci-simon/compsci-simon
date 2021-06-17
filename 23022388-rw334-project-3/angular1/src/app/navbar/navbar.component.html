@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="d-flex justify-content-between">
+
+  <div *ngIf="!loggedIn">
+    <button mat-icon-button routerLink=""><mat-icon>home</mat-icon></button>
+  </div>
+  <div *ngIf="loggedIn">
+    <button mat-icon-button routerLink="home"><mat-icon>home</mat-icon></button>
+  </div>
+
+  <div *ngIf="!loggedIn">
+    <button mat-flat-button color="primary" routerLink="login">Login</button>
+    <button mat-flat-button color="primary" routerLink="register">Register</button>
+  </div>
+  <div *ngIf="loggedIn">
+    <button mat-flat-button color="primary" routerLink="groups/manage" >Manage groups</button>
+    <button mat-flat-button color="primary" routerLink="post/create" >Create post</button>
+    <button mat-flat-button color="primary" routerLink="profile" ><mat-icon class="material-icons-outlined">account_circle</mat-icon></button>
+    <button mat-flat-button color="primary" routerLink="" (click)="logout()"><mat-icon>logout</mat-icon></button>
+  </div>
+
+</mat-toolbar>
