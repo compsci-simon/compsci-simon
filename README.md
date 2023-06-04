@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Simon</h1>
 <h3 align="center">A passionate software engineer from South Africa</h3>
 
-- 🔭 I’m currently working on **netSimon**
+- 🔭 I’m currently working on **netSim**
 
 - 🌱 I’m currently learning **C++**
 
