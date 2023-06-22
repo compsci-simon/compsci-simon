@@ -7,7 +7,7 @@
 
 <!-- -   👯 I’m looking to collaborate on **C++ projects** -->
 
--   👨‍💻 All of my projects are available at [simonsteven.io](simonsteven.io)
+<!-- -   👨‍💻 All of my projects are available at [simonsteven.io](simonsteven.io) -->
 
 -   💬 Ask me about **T3, tRPC and React and Python**
 
