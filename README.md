@@ -1,13 +1,11 @@
 <h1 align="center">Hi 👋, I'm Simon</h1>
 <h3 align="center">A passionate software engineer from South Africa</h3>
 
--   🔭 I’m currently working on **Starfire**
+-   🔭 I’m currently working on **OS DEV**
 
--   🌱 I’m currently learning **C++**
+-   🌱 I’m currently learning **C** and **Operating systems engineering**
 
-<!-- -   👯 I’m looking to collaborate on **C++ projects** -->
-
--   👨‍💻 All of my projects are available at [simonsteven.io](simonsteven.io)
+<!-- -   👨‍💻 All of my projects are available at [simonsteven.io](simonsteven.io) -->
 
 -   💬 Ask me about **T3, tRPC and React and Python**
 
