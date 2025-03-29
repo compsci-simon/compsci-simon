@@ -1,13 +1,13 @@
 <h1 align="center">Hi 👋, I'm Simon</h1>
 <h3 align="center">I like to build stuff.</h3>
 
--   🔭 I’m currently working on **OS DEV**
+-   🔭 I’m currently working on **Nand to tetris**
 
--   🌱 I’m currently learning **C** and **Operating systems engineering**
+-   🌱 I’m currently learning **how to build a computer**
 
 <!-- -   👨‍💻 All of my projects are available at [simonsteven.io](simonsteven.io) -->
 
--   💬 Ask me about **T3, tRPC and React and Python**
+-   💬 Ask me about **Typescript, tRPC and React and Python**
 
 -   📫 How to reach me **1simonsteven@gmail.com**
 
