@@ -1,9 +1,7 @@
 <h1 align="center">Hi 👋, I'm Simon</h1>
 <h3 align="center">I like to build stuff.</h3>
 
--   🔭 I’m currently working on **Nand to tetris**
-
--   🌱 I’m currently learning **how to build a computer**
+-   🔭 I’m currently working on **building redis**
 
 <!-- -   👨‍💻 All of my projects are available at [simonsteven.io](simonsteven.io) -->
 
